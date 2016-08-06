@@ -1,0 +1,23 @@
+﻿<Window x:Class="HiveDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:local="clr-namespace:HiveDesktop"
+        mc:Ignorable="d"
+        Title="Map App" Height="350" Width="525">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="460*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <m:Map x:Name="myMap" CredentialsProvider="Ar6PrYEgjuGjw7K27bMX99MEkhyknvg54O2UCVyHlEjutkWLJGBWB9R6-lIgZSLG" Center="52.7,-2" ZoomLevel="6" Margin="0,0,3,-0.333">
+            <m:Map.Mode>
+                <m:AerialMode/>
+            </m:Map.Mode>
+        </m:Map>
+        <Button x:Name="button" Content="Polygon" Margin="2,0,9.667,180.667" Grid.Column="1" Height="29" VerticalAlignment="Bottom" Click="button_Click_1"/>
+        <Button x:Name="button_Copy" Content="Image" Margin="9.8,0,1.4,120.8" Height="29" VerticalAlignment="Bottom" Click="button_Click_3" Grid.Column="1" RenderTransformOrigin="0.129,0.483"/>
+    </Grid>
+</Window>
